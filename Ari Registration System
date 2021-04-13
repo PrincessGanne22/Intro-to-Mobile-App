@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--The jQuery Mobile CSS theme file (optional, if you are overriding the default theme)-->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!--The jQuery core JavaScript file -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!--The jQuery Mobile core JavaScript file -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>Ari Registration System</title>
+
+    <style>
+        #submit,
+        #cancel {
+            width: 30%;
+            margin-left: 35%;
+        }
+        
+        #homepage {
+            /* font-weight: bold; */
+            background-color: skyblue;
+            /* text-align: center; */
+        }
+        
+        .ui-footer-theme-r {
+            color: red;
+            text-align: center;
+        }
+        
+        #butn {
+            background-color: red;
+        }
+        
+        #main-header {
+            background-color: white;
+            border-color: white;
+            text-align: center;
+        }
+        
+        #banner {
+            height: 40%;
+            width: 30%;
+        }
+        /*   .ui-menu-theme-r {
+            list-style-type: none;
+            padding-left: 4px;
+            padding-right: 7px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .ui-list-theme-r {
+            display: inline;
+            padding: 50px;
+        }
+        
+        .ui-anchor-theme-r {
+            color: black;
+            padding: 20px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        
+        .ui-li-a-theme-r:hover {
+            color: white;
+            background-color: green;
+        } */
+        
+        .ui-block-a,
+        .signlink,
+        .loglink {
+            text-align: center;
+        }
+        
+        #slink {
+            text-decoration: none;
+            color: black;
+        }
+        
+        #lName,
+        #fName,
+        #Email {
+            background-color: white;
+            width: 30%;
+        }
+        
+        #log {
+            font-size: 20px;
+        }
+    </style>
+
+    <script>
+        function checklogin() {
+            var ident = document.forms["frmLogin"]["id"].value;
+            var pass = document.forms["frmLogin"]["password"].value;
+            var id = cc29101032;
+            var psw = AAchantiloupe06;
+
+            if (ident == "") {
+                alert("Id must be filled out");
+                return false;
+            }
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <div data-role="page" id="homepage">
+        <div data-role="header" id="main-header">
+            <img src="images/banner3.PNG" id="banner" alt="banner">
+
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <img src="images/Logo3.PNG" id="logo" alt="logo" data-theme="r" class="ui-content ui-logo-theme-r">
+                </div>
+                <div data-role="form" id="login" class="ui-block-b">
+                    <form name="frmLogin" action="#" method="post" enctype="text/plain" id="frmLogin" onsubmit="return checklogin()">
+                        <h2 style="text-align: center;">Login</h2>
+                        <div>
+                            <label for="id#" id="log">ID#:</label>
+                            <input type="text" id="id">
+                        </div>
+                        <div>
+                            <label for="password" id="log">Password:</label>
+                            <input type="password" id="password">
+                        </div>
+                        <div>
+                            <button type="submit" id="submit" onclick="checklogin()">Login</button>
+                            <button type="reset" id="cancel">Cancel</button>
+                        </div>
+                        <div class="signlink">
+                            <a href="#signup" id="slink">New User? Register Here</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div data-role="footer" id="footer" data-theme="r" class="ui-content ui-footer-theme-r">
+            <a class="ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext ui-btn-inline" id="butn">Previous Page</a>
+            <a href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext ui-btn-inline" id="butn">Home</a>
+            <a class="ui-btn ui-corner-all ui-icon-user ui-btn-icon-notext ui-btn-inline" id="butn">Profile</a>
+            <a class="ui-btn ui-corner-all ui-icon-gear ui-btn-icon-notext ui-btn-inline" id="butn">Settings</a>
+            <a class="ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-notext ui-btn-inline" id="butn">Next Page</a>
+
+            <h4>Copyright &copy; 2021</h4>
+        </div>
+    </div>
+    <div data-role="page" id="signup" data-theme="r">
+        <div data-role="header" id="main-header">
+            <img src="images/banner3.PNG" id="banner" alt="banner" data-theme="r" class="ui-content ui-banner-theme-r">
+        </div>
+        <div data-role="menu" id="main-menu" class="ui-content">
+            <ul id="menu" data-theme="r" class="ui-content ui-menu-theme-r">
+                <li id="list" data-theme="r" class="ui-content ui-list-theme-r"><a href="#homepage" data-theme="r" id="anchor" class="ui-content ui-anchor-theme-r ui-li-a-theme-r">Home</a></li>
+                <li id="list" data-theme="r" class="ui-content ui-list-theme-r"><a href="#signup" id="anchor" class="ui-content ui-anchor-theme-r ui-li-a-theme-r">Sign Up</a></li>
+                <li id="list" data-theme="r" class="ui-content ui-list-theme-r"><a href="#coursereg" id="anchor" class="ui-content ui-anchor-theme-r ui-li-a-theme-r" data-transition="flip">Course Selection</a></li>
+                <li id="list" data-theme="r" class="ui-content ui-list-theme-r"><a href="#about" id="anchor" class="ui-content ui-anchor-theme-r ui-li-a-theme-r">About Us</a></li>
+            </ul>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <img src="images/Logo3.PNG" id="logo" alt="logo" data-theme="r" class="ui-content ui-logo-theme-r">
+                </div>
+                <div data-role="form" id="sign" class="ui-block-b">
+                    <form name="frmSignUp" action="#" method="post" enctype="text/plain" onsubmit="validateform();">
+                        <h2>Sign Up</h2>
+                        <div>
+                            <label for="fName" id="news">First Name:</label>
+                            <input type="text" placeholder="Enter Your First Name" id="fName" name="fName" required size="25">
+                        </div>
+                        <div>
+                            <label for="lName" id="news">Last Name:</label>
+                            <input type="text" placeholder="Enter Your Last Name" id="lName" name="lName" required size="25">
+                        </div>
+                        <div>
+                            <label for="Email" id="news">Email Address:</label>
+                            <input type="email" placeholder="Enter Your Email Address" id="Email" name="Email" required size="50">
+                        </div>
+                        <div>
+                            <label for="id#" id="log">ID#:</label>
+                            <input type="text" placeholder="Enter Your Id #" id="id" name="id#">
+                        </div>
+                        <div>
+                            <label for="password" id="log">Password:</label>
+                            <input type="text" placeholder="Enter Your Password" id="password" name="password">
+                        </div>
+                        <div>
+                            <button type="submit" id="submit" onclick="Submit_onclick()">Submit</button>
+                            <button type="reset" id="cancel">Cancel</button>
+                        </div>
+                        <div class="loglink">
+                            <a href="#homepage">Existing User? Login Here</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" id="footer" data-theme="r" class="ui-content ui-footer-theme-r">
+            <a class="ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext ui-btn-inline">Previous Page</a>
+            <a href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext ui-btn-inline">Home</a>
+            <a class="ui-btn ui-corner-all ui-icon-gear ui-btn-icon-notext ui-btn-inline">Settings</a>
+            <a class="ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-notext ui-btn-inline">Next Page</a>
+            <h4>Copyright &copy; 2021</h4>
+        </div>
+    </div>
+    <div data-role="page" id="coursereg" data-theme="r">
+        <div data-role="header" id="main-header">
+            <img src="images/banner3.PNG" id="banner" alt="banner" data-theme="r" class="ui-content ui-banner-theme-r">
+        </div>
+        <div data-role="menu" id="main-menu" class="ui-content">
+            <ul id="menu" data-theme="r" class="ui-content ui-menu-theme-r">
+                <li id="list" data-theme="r" class="ui-content ui-list-theme-r"><a href="#homepage" data-theme="r" id="anchor" class="ui-content ui-anchor-theme-r ui-li-a-theme-r" data-transition="">Home</a></li>
+                <li id="list" data-theme="r" class="ui-content ui-list-theme-r"><a href="#signup" id="anchor" class="ui-content ui-anchor-theme-r ui-li-a-theme-r" data-transition="flip">Sign Up</a></li>
+                <li id="list" data-theme="r" class="ui-content ui-list-theme-r"><a href="#coursereg" id="anchor" class="ui-content ui-anchor-theme-r ui-li-a-theme-r" data-transition="flip">Course Selection</a></li>
+                <li id="list" data-theme="r" class="ui-content ui-list-theme-r"><a href="#about" id="anchor" class="ui-content ui-anchor-theme-r ui-li-a-theme-r">About Us</a></li>
+            </ul>
+        </div>
+        <div id="head">
+            <img src="images/Logo3.PNG" id="logo" alt="logo" data-theme="r" class="ui-content ui-logo-theme-r">
+            <h1>Ari Registration System</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <h2>Course Selection</h2>
+            <div>
+                <label>Select Courses:</label>
+                <select name="courses" id="courses">
+                    <option value="intprog">Intro To Programming</option>
+                    <option value="web1">Web Development 1</option>
+                    <option value="faccount">Fundamentals of Accounting</option>
+                    <option value="comprog1">Computer Programming 1</option>
+                </select>
+            </div>
+        </div>
+        <div data-role="footer" id="footer" data-theme="r" class="ui-content ui-footer-theme-r">
+            <a class="ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext ui-btn-inline">Previous Page</a>
+            <a href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext ui-btn-inline">Home</a>
+            <a class="ui-btn ui-corner-all ui-icon-gear ui-btn-icon-notext ui-btn-inline">Settings</a>
+            <a class="ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-notext ui-btn-inline">Next Page</a>
+            <h4>Copyright &copy; 2021</h4>
+        </div>
+    </div>
+</body>
+
+</html>
